@@ -25,6 +25,7 @@ forEach [
 "Eng",
 "ExSpec",
 "FAC",
+"freizeit",
 "FTL",
 "Gren",
 "HeliCrew",

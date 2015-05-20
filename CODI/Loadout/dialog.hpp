@@ -473,7 +473,7 @@ class CODIIGUIBack
 class CODI_Loadout_ClassSelector
 {
 	idd = -1;
-	onLoad = "_this execVM 'CODI\loadout\initGUI.sqf';";
+	onLoad = "_this execVM 'CODI_Loadout\CODI\loadout\fnc_initClassSelector.sqf';";
 	class controls
 	{
 /* #Xuzogo
@@ -642,5 +642,67 @@ class IGUIBack_2200: CODIIGUIBack
 // GUI EDITOR OUTPUT END
 ////////////////////////////////////////////////////////
 
+	};
+};
+
+
+
+
+
+
+
+
+
+
+
+class CODI_Loadout_Teleport
+{
+	idd = -1;
+	onLoad = "_this execVM 'CODI_Loadout\CODI\loadout\fnc_initTeleport.sqf';";
+	class controls
+	{
+/* #Tykexu
+$[
+	1.063,
+	["asd",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[2100,"",[1,"",["0.419792 * safezoneW + safezoneX","0.445021 * safezoneH + safezoneY","0.160417 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"",[1,"Teleport",["0.419792 * safezoneW + safezoneX","0.478009 * safezoneH + safezoneY","0.160417 * safezoneW","0.0219914 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2200,"",[1,"",["0.414063 * safezoneW + safezoneX","0.434026 * safezoneH + safezoneY","0.171875 * safezoneW","0.07697 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
+
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by Coding, v1.063, #Tykexu)
+////////////////////////////////////////////////////////
+
+class RscCombo_2100: CODIRscCombo
+{
+	idc = 2100;
+	x = 0.419792 * safezoneW + safezoneX;
+	y = 0.445021 * safezoneH + safezoneY;
+	w = 0.160417 * safezoneW;
+	h = 0.0219914 * safezoneH;
+};
+class RscButton_1600: CODIRscButton
+{
+	idc = 1600;
+	text = "Teleport"; //--- ToDo: Localize;
+	x = 0.419792 * safezoneW + safezoneX;
+	y = 0.478009 * safezoneH + safezoneY;
+	w = 0.160417 * safezoneW;
+	h = 0.0219914 * safezoneH;
+	action = "call CODI_Loadout_fnc_teleport";
+};
+class IGUIBack_2200: CODIIGUIBack
+{
+	idc = 2200;
+	x = 0.414063 * safezoneW + safezoneX;
+	y = 0.434026 * safezoneH + safezoneY;
+	w = 0.171875 * safezoneW;
+	h = 0.07697 * safezoneH;
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////
 	};
 };
